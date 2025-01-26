@@ -7,8 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class PerformCalculationImplWithBefore {
 
@@ -24,6 +23,7 @@ public class PerformCalculationImplWithBefore {
     void testDataServiceBasedAddition(){
       when(dataService.retreiveAllData()).thenReturn(new int[]{1,2,3});
       assertEquals(6,impl.PerformAdditionViaDataService());
+      verify(dataService,times(1)).retreiveAllData();
     }
 
     @Test
