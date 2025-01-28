@@ -7,4 +7,5 @@ import java.util.List;
 public interface ItemService {
     public Item getItem();
     public List<Item> getItemList();
+    public List<Item> getItemListByUser();
 }
