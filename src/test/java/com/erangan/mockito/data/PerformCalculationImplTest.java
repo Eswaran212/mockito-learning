@@ -22,7 +22,7 @@ public class PerformCalculationImplTest  {
     @Test
     void testDataServiceBasedAddition(){
         PerformCalculationImpl impl = new PerformCalculationImpl();
-       // impl.setDataService(()->{return new int[]{1,3,4,6};});
+        impl.setDataService(()->{return new int[]{1,3,4,6};});
         int result =impl.PerformAdditionViaDataService();
         assertNotEquals(111,result);
     }
